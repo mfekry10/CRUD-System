@@ -1,0 +1,58 @@
+<htm>
+    <head>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    </head>
+    <body>
+
+        <div class="w-75 m-auto">
+            <h1 class="text-center text-info">My Product</h1>
+            <div class="my-4 text-info">
+                <label>Product Name</label>
+                <input id="pName" class="form-control">
+            </div>
+            <div class="my-4 text-info">
+                <label>Product Price</label>
+                <input id="pPrice" class="form-control">
+            </div>
+            <div class="my-4 text-info">
+                <label>Product Category</label>
+                <input id="pCat" class="form-control">
+            </div>
+            <div class="my-4 text-info">
+                <label>Product Description</label>
+                <textarea id="pDesc" class="form-control"></textarea>
+            </div>
+
+            <button id="add_btn" class="btn btn-info text-white" onclick="addProduct()">Add Product</button>
+            <button id="update_btn" class="btn btn-warning text-white d-none" onclick="updateProduct()">Update Product</button>
+
+            <input class="form-control mt-4 w-75 m-auto" placeholder="Search Product" onkeyup="searchProduct(this.value)">
+
+            <table class="table mt-4">
+                <thead>
+                    <th class="text-info">Name</th>
+                    <th class="text-info">Price</th>
+                    <th class="text-info">Category</th>
+                    <th class="text-info">Description</th>
+                    <th class="text-warning">Update Product</th>
+                    <th class="text-danger">Delete Product</th>
+
+                </thead>
+                <tbody id="tBody">
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+      
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/mine1.js"></script>
+    </body>
+</html>
