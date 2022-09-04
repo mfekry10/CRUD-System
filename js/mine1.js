@@ -117,14 +117,27 @@ function updateProduct(pIndex){
 
 function searchProduct(userWord){
 
-    // for(var i = 0 ;i< arrItems.length;i++){
+    var hasal = ''
 
-    //     if(arrItems[i].pName.includes(userWord)){
+    for(var i = 0 ;i< arrItems.length;i++){
 
-    //         console.log("dd");
+        if(arrItems[i].pName.toLowerCase().includes(userWord.toLowerCase())){
 
-    //     }
-    // }
+                hasal += `<tr>
+                <td>${i}</td>
+                <td>${arrItems[i].pName}</td>
+                <td>${arrItems[i].pPrice}</td>
+                <td>${arrItems[i].pCat}</td>
+                <td>${arrItems[i].pDesc}</td>
+                <td><button class="btn btn-warning" onclick="retriveItems(${i})">Update</button></td>
+                <td><button class="btn btn-danger" onclick="deleteItems(${i})">Delete</button></td>
+                
+                </tr>        
+                
+                `
+        }
+    }
+    document.getElementById("tBody").innerHTML = hasal;
 
 
 
